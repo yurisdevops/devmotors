@@ -19,6 +19,7 @@ export function Submenu() {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
+    
   }, []);
 
   function toggleMenu() {
