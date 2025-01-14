@@ -5,8 +5,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import { X, Menu } from "lucide-react";
+import { MenuProps } from "@/utils/menu.type";
 
-export function Submenu() {
+interface SubMenuProp {
+  menu: MenuProps;
+}
+
+export function Submenu({ menu }: SubMenuProp) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -19,7 +24,6 @@ export function Submenu() {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-    
   }, []);
 
   function toggleMenu() {
@@ -39,15 +43,11 @@ export function Submenu() {
               <X size={54} color="#121212" className={styles.closeButton} />
             </button>
           )}
-          <li>
-            <Link href="/post/pag01"> pag 01</Link>
-          </li>
-          <li>
-            <Link href="/post/pag02"> pag 02</Link>
-          </li>
-          <li>
-            <Link href="/post/pag03"> pag 03</Link>
-          </li>
+          {menu.objects.map((item) => (
+            <li key={item.title}>
+              <Link href={`/post/${item.slug}`}>{item.title}</Link>
+            </li>
+          ))}
         </ul>
       </section>
     </main>

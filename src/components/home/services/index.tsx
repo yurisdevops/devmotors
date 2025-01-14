@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import { HomeProps } from "@/utils/actions/home.type";
+import { HomeProps } from "@/utils/home.type";
 
 export function Services({ object }: HomeProps) {
   return (

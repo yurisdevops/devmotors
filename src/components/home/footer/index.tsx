@@ -1,4 +1,4 @@
-import { HomeProps } from "@/utils/actions/home.type";
+import { HomeProps } from "@/utils/home.type";
 import styles from "./styles.module.scss";
 import { Mail, Map, Phone, Clock } from "lucide-react";
 
@@ -38,6 +38,19 @@ export function Footer({ object }: HomeProps) {
           </div>
         </div>
       </section>
+
+      <a
+        href={object.metadata.cta_button.url}
+        className={styles.link}
+        target="_blank"
+      >
+        <Phone size={24} color="#fff" />
+        {object.metadata.cta_button.title}
+      </a>
+      <p className={styles.copyText}>
+        Todos os direitos reservados {object.title} @{" "}
+        {`${new Date().getFullYear()}`}{" "}
+      </p>
     </footer>
   );
 }
