@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { PostProps } from "../post.type";
 
 export async function getDataHome() {
@@ -63,7 +64,6 @@ export async function getItemBySlug(itemSlug: string): Promise<PostProps> {
       return { object: [] }; // Retorne um array vazio se não encontrar objetos
     }
   } catch (error) {
-    console.error(error); // Adicione logging para ajuda na depuração
-    throw new Error("Falha na requisição dos itens slugs");
+    redirect("/");
   }
 }

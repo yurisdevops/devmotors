@@ -5,17 +5,22 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 
 export function Header() {
-  const [top, setTop] = useState(true);
-
-  const handleScroll = () => {
-    window.scrollY > 10 ? setTop(false) : setTop(true);
-  };
+  const [top, setTop] = useState<boolean>(true); // Assume que a página começa no topo
 
   useEffect(() => {
+    const handleScroll = () => {
+      setTop(window.scrollY <= 10);
+    };
+
+    // Adiciona o listener apenas no cliente
     window.addEventListener("scroll", handleScroll);
 
+    // Define o estado inicial no cliente
+    handleScroll();
+
+    // Cleanup do event listener
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [top]);
+  }, []);
 
   return (
     <header

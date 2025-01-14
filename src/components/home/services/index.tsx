@@ -17,6 +17,8 @@ export function Services({ object }: HomeProps) {
             className={styles.imageAbout}
             quality={100}
             fill={true}
+            priority
+            sizes="(max-width:480px) 100vw, (max-width:1024px) 75vw, 50vw"
           ></Image>
         </div>
       </section>
@@ -33,6 +35,8 @@ export function Services({ object }: HomeProps) {
                 className={styles.imageService}
                 quality={100}
                 fill={true}
+                priority
+                sizes="(max-width:480px) 100vw, (max-width:1024px) 75vw, 50vw"
               ></Image>
             </div>
             <p>{service.description}</p>

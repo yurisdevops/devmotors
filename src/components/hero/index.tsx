@@ -30,7 +30,8 @@ export function Hero({
         <Image
           src={bannerUrl}
           alt={heading}
-          priority={true}
+          priority
+          sizes="(max-width:480px) 100vw, (max-width:1024px) 75vw, 50vw"
           quality={100}
           fill={true}
           className={styles.banner}

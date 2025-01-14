@@ -24,10 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         {children}
+        <p style={{ textAlign: "center", marginTop: 54, marginBottom: 24 }}>
+          Todos os direitos reservados DevMotors @{`${new Date().getFullYear()}`}{" "}
+        </p>
       </body>
     </html>
   );
