@@ -1,6 +1,10 @@
 import { redirect } from "next/navigation";
 import { PostProps } from "../post.type";
 
+function delay(delay: number) {
+  return new Promise((resolve) => setTimeout(resolve, delay));
+}
+
 export async function getDataHome() {
   try {
     const res = await fetch(
@@ -45,6 +49,7 @@ export async function getItemBySlug(itemSlug: string): Promise<PostProps> {
     props: "slug, title, content, metadata",
     read_key: process.env.READ_KEY as string,
   });
+  // await delay(1000);
 
   const url = `${baseUrl}?${queryParams.toString()}`;
 
