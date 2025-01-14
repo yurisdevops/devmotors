@@ -7,10 +7,10 @@
 
 .fixed {
   position: fixed;
-  background-color: rgba(252, 252, 252, 0.73);
-  -webkit-box-shadow: 0px, 6px 20px -12px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 6px 20px -12px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 6px 20px -12px rgba(0, 0, 0, 0.6);
+  background-color: rgba(252, 252, 252, 0.74);
+  box-shadow: 0px 6px 20px -12px rgba(0, 0, 0, 0.6); // Padrão
+  -webkit-box-shadow: 0px 6px 20px -12px rgba(0, 0, 0, 0.6); // Webkit
+  -moz-box-shadow: 0px 6px 20px -12px rgba(0, 0, 0, 0.6); // Mozilla
   backdrop-filter: blur(4px);
 }
 
@@ -30,6 +30,7 @@
   justify-content: space-between;
   height: 64px;
 }
+
 .contentLogo {
   display: none;
 }
@@ -50,6 +51,7 @@
     display: flex;
     align-items: center;
     padding: 8px 14px;
+    transition: all 0.7s;
   }
 
   a:hover {
@@ -63,3 +65,5 @@
     display: flex;
   }
 }
+
+// Seu componente React
