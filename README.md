@@ -87,7 +87,7 @@ Com `yarn`:
 yarn dev
 ```
 
-Acesse a aplicação no navegador: [https://devmotors-zeta.vercel.app](https://devmotors-zeta.vercel.app).
+Acesse a aplicação no navegador: [DevMotors](https://devmotors-zeta.vercel.app).
 
 ## Scripts Disponíveis
 
@@ -134,7 +134,7 @@ Acesse a aplicação no navegador: [https://devmotors-zeta.vercel.app](https://d
 
 ## Contato
 
-Desenvolvido por [Yuri Souza](https://github.com/seu-usuario). Entre em contato para dúvidas ou sugestões!
+Desenvolvido por [Yuri Souza](https://github.com/yurisdevops). Entre em contato para dúvidas ou sugestões!
 
 ---
 
