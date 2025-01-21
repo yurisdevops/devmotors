@@ -1,5 +1,3 @@
-Aqui está o README ajustado com base na estrutura de pastas fornecida:
-
 # DevMotors
 
 > Plataforma web para gerenciamento e compartilhamento de informações sobre uma loja mecânica de carros clássicos.
@@ -141,5 +139,3 @@ Desenvolvido por [Yuri Souza](https://github.com/yurisdevops). Entre em contato 
 ### 🚗 **Gerencie suas informações sobre a loja mecânica de carros clássicos de maneira simples e eficiente com o DevMotors!**
 
 ---
-
-Espero que isso atenda às suas necessidades! Se precisar de mais ajustes ou tiver outras solicitações, estou aqui para ajudar.
