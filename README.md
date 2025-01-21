@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Aqui está o README ajustado com base na estrutura de pastas fornecida:
 
-## Getting Started
+# DevMotors
 
-First, run the development server:
+> Plataforma web para gerenciamento e compartilhamento de informações sobre uma loja mecânica de carros clássicos.
+
+O **DevMotors** é uma aplicação moderna desenvolvida com as últimas tecnologias do **Next.js**, focada em fornecer uma experiência simples e intuitiva para gerenciar informações sobre uma loja mecânica especializada em carros clássicos. O projeto inclui recursos avançados para a criação e gerenciamento de informações, com controle de visibilidade e integração com Cosmic CMS.
+
+## Índice
+
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Usar](#como-usar)
+- [Scripts Disponíveis](#scripts-disponíveis)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Futuras Implementações](#futuras-implementações)
+- [Contato](#contato)
+
+## Descrição do Projeto
+
+O **DevMotors** permite criar, compartilhar e gerenciar informações sobre uma loja mecânica de carros clássicos de forma prática e segura. Ele oferece:
+
+- Criação e gerenciamento de informações sobre serviços oferecidos.
+- Integração com Cosmic CMS para gerenciamento de conteúdo.
+- Interface moderna e responsiva para fácil navegação.
+
+## Funcionalidades
+
+- **Gerenciamento de Informações:** Criação, edição e exclusão de dados sobre serviços mecânicos e carros clássicos.
+- **Integração com Cosmic CMS:** Armazenamento e recuperação de dados.
+- **Interface Moderna:** Navegação responsiva com CSS Modules.
+
+## Tecnologias Utilizadas
+
+- **Next.js:** Framework moderno para construção de aplicações web.
+- **Cosmic CMS:** Sistema de gerenciamento de conteúdo.
+- **React:** Biblioteca para construção de interfaces de usuário.
+- **Sass:** Pré-processador CSS.
+- **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática.
+
+## Como Usar
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/yurisdevops/devmotors.git
+cd devmotors
+```
+
+### 2. Instalar Dependências
+
+Com `npm`:
+
+```bash
+npm install
+```
+
+Com `yarn`:
+
+```bash
+yarn install
+```
+
+### 3. Configurar o Cosmic CMS
+
+- Crie um projeto no [Cosmic CMS](https://www.cosmicjs.com/).
+- Adicione as credenciais no arquivo `.env`:
+
+```env
+NEXT_PUBLIC_API_URL=https://api.cosmicjs.com/v3/buckets/seu-projeto
+READ_KEY=key-cosmic-do-seu-projeto
+NEXT_PUBLIC_URL=https://localhost:3000
+```
+
+### 4. Executar o Projeto
+
+Com `npm`:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Com `yarn`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Acesse a aplicação no navegador: [https://devmotors-zeta.vercel.app](https://devmotors-zeta.vercel.app).
 
-## Learn More
+## Scripts Disponíveis
 
-To learn more about Next.js, take a look at the following resources:
+- **`npm run dev`**: Inicia o servidor de desenvolvimento.
+- **`npm run build`**: Gera os arquivos para produção.
+- **`npm run start`**: Inicia a aplicação em produção.
+- **`npm run lint`**: Executa o linter para verificar erros de código.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura do Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`DEVMOTORS`**
+  - **node_modules** (dependências do projeto)
+  - **public**
+    - `favicon.ico`
+  - **src**
+    - **app**
+      - **post**
+        - **[slug]**
+          - `error.module.scss`
+          - `error.tsx`
+          - `page.tsx`
+          - `styles.module.scss`
+          - **components**
+    - `favicon.ico`
+    - `globals.scss`
+    - `layout.tsx`
+    - `page.tsx`
+  - **components** (componentes reutilizáveis)
+  - **utils** (funções utilitárias)
+  - `.env.local` (variáveis de ambiente)
+  - `.gitignore` (arquivos e diretórios a serem ignorados pelo Git)
+  - `next-env.d.ts` (tipagens do TypeScript para Next.js)
+  - `next.config.ts` (configurações do Next.js)
+  - `package-lock.json` (registro de dependências)
+  - `package.json` (configurações do projeto e dependências)
+  - `README.md` (documentação do projeto)
+  - `tsconfig.json` (configurações do TypeScript)
 
-## Deploy on Vercel
+## Futuras Implementações
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Categorias de Serviços:** Organização dos serviços oferecidos pela loja.
+- **Notificações em Tempo Real:** Alertas sobre atualizações de informações.
+- **Modo Offline:** Acesso às informações mesmo sem conexão à internet.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contato
+
+Desenvolvido por [Yuri Souza](https://github.com/seu-usuario). Entre em contato para dúvidas ou sugestões!
+
+---
+
+### 🚗 **Gerencie suas informações sobre a loja mecânica de carros clássicos de maneira simples e eficiente com o DevMotors!**
+
+---
+
+Espero que isso atenda às suas necessidades! Se precisar de mais ajustes ou tiver outras solicitações, estou aqui para ajudar.
